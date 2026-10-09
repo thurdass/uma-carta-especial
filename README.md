@@ -19,13 +19,13 @@ Abra **`content.js`**. Dados pessoais, títulos, textos, navegação, projetos, 
 
 - Busque por `EDITAR` para encontrar dados pendentes.
 - Revise os textos sugeridos para que expressem sua história e sua forma de falar.
-- `sogro.nome` personaliza a saudação. Se estiver vazio ou com `EDITAR`, aparece “Olá, senhor.”.
+- `destinatarios.mae` e `destinatarios.pai` definem os nomes dos pais da Danielle na saudação. Se ambos estiverem vazios ou com `EDITAR`, aparece “Olá, sejam bem-vindos.”.
 - `sobreMim` reúne seus dados, interesses e objetivo de cursar Engenharia de Software em uma única apresentação. A escola aparece no texto de apresentação; as cidades só aparecem se estiverem preenchidas.
 - `familia` reúne o título, a apresentação, os nomes e profissões dos seus pais e a foto da seção “Minha família”.
 - `sobreMim.idade` pode conter uma idade escrita, como `"17 anos"`. Se ficar vazio, ela é calculada usando `nascimento`, no formato `DD/MM/AAAA`. A data completa não aparece na página.
 - O título e a descrição da aba são configurados em `site`.
 - Use `\n` para uma quebra de linha nos títulos e `\n\n` para novos parágrafos nos textos longos. Não use HTML nos textos.
-- As marcações `[nome]`, `[nomeCompleto]`, `[idade]`, `[curso]`, `[cidadeNascimento]`, `[cidadeAtual]`, `[escola]` e `[pais]` são substituídas pelos dados correspondentes.
+- As marcações `[nomes]`, `[nomeCompleto]`, `[idade]`, `[curso]`, `[cidadeNascimento]`, `[cidadeAtual]`, `[escola]` e `[pais]` são substituídas pelos dados correspondentes. `[nomes]` se refere aos destinatários da carta; `[pais]`, aos seus próprios pais.
 - Para adicionar ou remover itens, edite os arrays `projetos`, `futuro` e `compromissos`. A numeração se ajusta automaticamente. Os projetos aparecem como exemplos breves na seção “Sobre mim”; `interesses.rotuloProjetos` define a frase que apresenta essa lista.
 - Links de projetos precisam começar com `https://` ou `http://`. Um link vazio, inválido ou com `EDITAR` não aparece como botão.
 

@@ -21,7 +21,7 @@
 
   const person = content.sobreMim;
   const tokens = {
-    nome: isFilled(content.sogro.nome) ? content.sogro.nome.trim() : "",
+    nomes: [content.destinatarios.mae, content.destinatarios.pai].filter(isFilled).map((name) => name.trim()).join(" e ") || "sejam bem-vindos",
     nomeCompleto: person.nomeCompleto,
     idade: isFilled(person.idade) ? person.idade : getAge(person.nascimento),
     curso: person.curso,

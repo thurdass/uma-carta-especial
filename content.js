@@ -16,20 +16,21 @@
 const siteContent = {
   site: {
     titulo: "Arthur | Uma apresentação, com respeito",
-    descricao: "Uma carta sobre quem sou, o que quero construir e as intenções que prefiro demonstrar com atitudes.",
+    descricao: "Uma carta para os pais da Danielle sobre quem sou, o que quero construir e as intenções que prefiro demonstrar com atitudes.",
     nomeCurto: "Arthur",
     assinatura: "Arthur.",
     rodape: "Uma apresentação, feita com cuidado e respeito.",
   },
 
-  sogro: {
-    nome: "EDITAR", // Enquanto estiver vazio ou EDITAR, a saudação será apenas “Olá, senhor.”.
+  destinatarios: {
+    mae: "Selma Macedo",
+    pai: "José Alípio",
   },
 
   navegacao: {
     sobre: "Sobre mim",
-    futuro: "Meu futuro",
     familia: "Minha família",
+    futuro: "Meu futuro",
     nos: "Nós",
     intencoes: "Minhas intenções",
   },
@@ -44,10 +45,10 @@ const siteContent = {
   apresentacao: {
     abertura: "Uma carta aberta",
     nota: "Para nos conhecermos melhor",
-    titulo: "Olá,\nsenhor [nome].",
+    titulo: "Olá,\n[nomes].",
     subtitulo: "Talvez esta seja uma forma um pouco diferente de me apresentar.",
-    descricao: "Mas a intenção é simples: que o senhor conheça um pouco de quem eu sou, do que quero para o futuro e do carinho que tenho pela sua filha.",
-    botao: "Conheça um pouco sobre mim",
+    descricao: "Mas a intenção é simples: que vocês conheçam um pouco de quem eu sou, do que quero para o futuro e do carinho que tenho pela filha de vocês.",
+    botao: "Conheçam um pouco sobre mim",
     remetente: "De Arthur, com respeito.",
     rodape: "Sobre quem sou e o que quero construir",
   },
@@ -84,7 +85,7 @@ const siteContent = {
   },
 
   interesses: {
-    rotuloProjetos: "Um pouco do que tenho feito",
+    rotuloProjetos: "Projetos",
   },
 
   // Adicione ou remova projetos copiando ou apagando um bloco completo.
@@ -143,7 +144,7 @@ const siteContent = {
   familia: {
     rotulo: "Quem também faz parte da minha história",
     titulo: "Minha família.",
-    descricao: "Para me conhecer um pouco melhor, também quero apresentar meus pais.",
+    descricao: "Para vocês me conhecerem um pouco melhor, também quero apresentar meus pais.",
     mae: {
       rotulo: "Minha mãe",
       nome: "Vania Aparecida da Silva",
@@ -186,7 +187,7 @@ const siteContent = {
 
   intencoes: {
     rotulo: "A parte mais importante desta carta",
-    titulo: "Então, quais são\nminhas intenções\ncom sua filha?",
+    titulo: "Então, quais são\nminhas intenções\ncom a filha de vocês?",
     introducao: "Ter seriedade no que sinto.\nTer cuidado no que faço.",
     textoPrincipal: "Minhas intenções são sérias. Não quero brincar com os sentimentos dela ou tratar nossa relação como algo sem importância. Quero construir confiança com respeito, sinceridade e diálogo.\n\nQuero ser alguém com quem ela possa contar. Apoiar seus sonhos, respeitar suas escolhas e crescer ao lado dela, sem atrapalhar seus estudos, suas amizades ou o futuro que ela deseja para si.\n\nSei que ainda somos jovens e que amadurecer leva tempo. Não tenho como prometer uma vida sem dificuldades, mas posso escolher ouvir, conversar e assumir a responsabilidade pelas minhas atitudes.",
     tituloCasamento: "E sobre um futuro juntos?",
@@ -195,14 +196,14 @@ const siteContent = {
 
   principios: {
     rotulo: "Das palavras para as atitudes",
-    titulo: "O que o senhor\npode esperar\nde mim.",
+    titulo: "O que vocês\npodem esperar\nde mim.",
     descricao: "Mais do que uma boa apresentação, quero que estes princípios apareçam no dia a dia.",
   },
 
   compromissos: [
     {
       titulo: "Respeito",
-      descricao: "Pela sua filha, pelas escolhas e pelos limites dela. Pela família de vocês e pela confiança que se constrói aos poucos.",
+      descricao: "Pela filha de vocês, pelas escolhas e pelos limites dela. Pela família de vocês e pela confiança que se constrói aos poucos.",
     },
     {
       titulo: "Diálogo",
@@ -221,7 +222,7 @@ const siteContent = {
   mensagemFinal: {
     rotulo: "Uma conversa que começa aqui",
     titulo: "Uma última mensagem.",
-    texto: "Eu sei que confiança não é conquistada através de um site.\n\nFiz isso apenas para que o senhor pudesse conhecer um pouco melhor quem eu sou, o que quero para minha vida e quais são minhas intenções com sua filha.\n\nNão espero que estas palavras sejam suficientes. Espero que, com o tempo, minhas atitudes confirmem cada uma delas.",
+    texto: "Eu sei que confiança não é conquistada através de um site.\n\nFiz isso apenas para que vocês pudessem conhecer um pouco melhor quem eu sou, o que quero para minha vida e quais são minhas intenções com a filha de vocês.\n\nNão espero que estas palavras sejam suficientes. Espero que, com o tempo, minhas atitudes confirmem cada uma delas.",
     destaque: "Porque respeito\nse demonstra.",
     despedida: "Com respeito,",
   },
