@@ -87,15 +87,13 @@
   });
 
   const projects = document.getElementById("projects");
-  content.projetos.forEach((project, index) => {
+  content.projetos.forEach((project) => {
     const article = element("article", "project");
     const heading = element("div", "project-heading");
-    const number = element("span", "project-number", String(index + 1).padStart(2, "0"));
-    number.setAttribute("aria-hidden", "true");
     const title = element("div");
     title.append(element("h3", "", project.nome));
     if (isFilled(project.categoria)) title.append(element("p", "project-category", project.categoria));
-    heading.append(number, title);
+    heading.append(title);
     const copy = element("div");
     copy.append(element("p", "project-description", project.descricao));
     // Somente URLs web completas. EDITAR nunca vira um link sem destino.
@@ -129,13 +127,11 @@
   });
 
   const commitments = document.getElementById("commitments");
-  content.compromissos.forEach((commitment, index) => {
+  content.compromissos.forEach((commitment) => {
     const item = element("li");
-    const number = element("span", "commitment-number", String(index + 1).padStart(2, "0"));
-    number.setAttribute("aria-hidden", "true");
     const copy = element("div");
     copy.append(element("h3", "", commitment.titulo), element("p", "", commitment.descricao));
-    item.append(number, copy);
+    item.append(copy);
     commitments.append(item);
   });
 
@@ -179,27 +175,6 @@
     if (!event.target.closest(".site-header")) closeMenu();
   });
   mobile.addEventListener("change", closeMenu);
-
-  const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
-  if ("IntersectionObserver" in window && !motionPreference.matches) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.replace("reveal-pending", "reveal-visible");
-        observer.unobserve(entry.target);
-      });
-    }, { threshold: 0.08 });
-
-    document.querySelectorAll("[data-reveal]").forEach((node) => {
-      node.classList.add("reveal-pending");
-      observer.observe(node);
-    });
-    motionPreference.addEventListener("change", (event) => {
-      if (!event.matches) return;
-      observer.disconnect();
-      document.querySelectorAll(".reveal-pending").forEach((node) => node.classList.remove("reveal-pending"));
-    });
-  }
 
   const progress = document.getElementById("reading-progress");
   const links = [...navigation.querySelectorAll("a")];

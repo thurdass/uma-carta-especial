@@ -26,14 +26,14 @@ Abra **`content.js`**. Dados pessoais, títulos, textos, navegação, projetos, 
 - O título e a descrição da aba são configurados em `site`.
 - Use `\n` para uma quebra de linha nos títulos e `\n\n` para novos parágrafos nos textos longos. Não use HTML nos textos.
 - As marcações `[nomes]`, `[nomeCompleto]`, `[idade]`, `[curso]`, `[cidadeNascimento]`, `[cidadeAtual]`, `[escola]` e `[pais]` são substituídas pelos dados correspondentes. `[nomes]` se refere aos destinatários da carta; `[pais]`, aos seus próprios pais.
-- Para adicionar ou remover itens, edite os arrays `projetos`, `futuro` e `compromissos`. A numeração se ajusta automaticamente. Os projetos aparecem como exemplos breves na seção “Sobre mim”; `interesses.rotuloProjetos` define a frase que apresenta essa lista.
+- Para adicionar ou remover itens, edite os arrays `projetos`, `futuro` e `compromissos`. Os projetos aparecem como exemplos breves na seção “Sobre mim”; `interesses.rotuloProjetos` define a frase que apresenta essa lista.
 - Links de projetos precisam começar com `https://` ou `http://`. Um link vazio, inválido ou com `EDITAR` não aparece como botão.
 
 Mantenha as aspas, vírgulas, chaves e os nomes das propriedades. Para usar aspas dentro de uma frase, escreva `\"`, ou use aspas tipográficas: “assim”.
 
 ## Trocar as fotos
 
-1. As fotos atuais estão em `assets/images/retrato.jpeg` e `assets/images/pais.jpeg`. Para incluir uma foto de vocês, coloque-a em `assets/images/casal.jpg`. Também é possível usar PNG, WebP ou outros nomes.
+1. As fotos atuais estão em `assets/images/retrato.jpeg`, `assets/images/pais.jpeg` e `assets/images/juntos.jpg`. Também é possível usar PNG, WebP ou outros nomes.
 2. Em `content.js`, preencha:
 
 ```js
@@ -43,7 +43,7 @@ alt: "Descreva brevemente sua foto",
 posicao: "center 25%",
 
 // Dentro de relacionamento.foto:
-caminho: "assets/images/casal.jpg",
+caminho: "assets/images/juntos.jpg",
 alt: "Descreva brevemente a foto de vocês",
 posicao: "center",
 
@@ -55,7 +55,7 @@ posicao: "center",
 
 Esses trechos são exemplos de campos a editar nos blocos existentes, não um novo bloco para colar no fim do arquivo.
 
-Sem um caminho, a página mostra uma reserva visual, cujos textos também estão em `content.js`. Se uma foto não carregar, a reserva continua disponível. As fotos de perfil e dos seus pais já estão configuradas; a foto do casal pode ser adicionada quando quiser. Prefira um retrato vertical e uma foto do casal horizontal; `posicao` ajusta o recorte sem alterar a imagem original.
+Sem um caminho, a página mostra uma reserva visual, cujos textos também estão em `content.js`. Se uma foto não carregar, a reserva continua disponível. As três fotos já estão configuradas. Os espaços usam a proporção vertical 3:4; a foto do casal é exibida inteira, sem corte. Nos retratos, `posicao` ajusta o enquadramento sem alterar a imagem original.
 
 Use caminhos relativos, sem `/` no início, e respeite letras maiúsculas e minúsculas dos nomes dos arquivos.
 
@@ -67,7 +67,6 @@ Edite as variáveis em **`:root`, no início de `style.css`**:
 - `--color-surface`: fundo das seções alternadas.
 - `--color-ink` e `--color-muted`: textos.
 - `--color-accent`: detalhes e destaques.
-- `--color-forest`: fundo da seção sobre vocês.
 - `--font-editorial` e `--font-body`: fontes de títulos e textos.
 - `--space-section`, `--page-gutter` e `--container-width`: espaçamento e largura.
 
@@ -97,7 +96,7 @@ O HTML solicita que buscadores não indexem a página, mas **isso não impede o 
 index.html          Estrutura semântica e pontos de inserção do conteúdo
 style.css           Identidade visual, responsividade e impressão
 content.js          Todo o conteúdo pessoal editável
-script.js           Preenchimento da página, menu e animações discretas
+script.js           Preenchimento da página, menu e progresso de leitura
 README.md           Este guia
 .nojekyll           Publicação estática sem processamento pelo Jekyll
 assets/
@@ -105,4 +104,4 @@ assets/
   images/           Coloque suas fotos aqui
 ```
 
-O JavaScript é necessário para ler a carta completa. Sem ele, permanecem a estrutura básica, as âncoras e um aviso de como habilitar a apresentação. Com JavaScript, o site inclui menu móvel acessível por teclado, indicador de leitura e entradas suaves com `IntersectionObserver`; a preferência por movimento reduzido é respeitada.
+O JavaScript é necessário para ler a carta completa. Sem ele, permanecem a estrutura básica, as âncoras e um aviso de como habilitar a apresentação. O site inclui menu móvel acessível por teclado e indicador de leitura. Há apenas uma entrada suave na abertura, feita com CSS; os demais textos ficam visíveis durante toda a leitura. A preferência por movimento reduzido é respeitada.
